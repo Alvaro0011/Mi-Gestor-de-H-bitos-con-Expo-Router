@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "name": "Mi Gestor de Hábitos",
+    "slug": "mi-gestor-de-habitos",
+    "version": "1.0.0",
+    "scheme": "habitos",
+    "plugins": ["expo-router"],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

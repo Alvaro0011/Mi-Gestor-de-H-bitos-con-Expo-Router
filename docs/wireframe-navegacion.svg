@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980">
+  <defs>
+    <style>
+      .title { font: 700 32px Arial, sans-serif; fill: #172033; }
+      .subtitle { font: 18px Arial, sans-serif; fill: #536075; }
+      .section { font: 700 18px Arial, sans-serif; fill: #172033; }
+      .screen { font: 700 20px Arial, sans-serif; fill: #172033; }
+      .small { font: 16px Arial, sans-serif; fill: #536075; }
+      .label { font: 700 15px Arial, sans-serif; fill: #ffffff; }
+      .node { fill: #ffffff; stroke: #b9c5d8; stroke-width: 2; }
+      .phone { fill: #ffffff; stroke: #25334b; stroke-width: 3; }
+      .tab { fill: #eaf1ff; stroke: #5a83d8; stroke-width: 2; }
+      .stack { fill: #fff3df; stroke: #e59a3a; stroke-width: 2; }
+      .dynamic { fill: #e3f8ef; stroke: #38a56b; stroke-width: 2; }
+      .modal { fill: #f5eaff; stroke: #9c62d4; stroke-width: 2; }
+      .line { stroke: #657691; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#657691"/></marker>
+  </defs>
+  <rect width="1600" height="980" fill="#f7f9fc"/>
+  <text x="70" y="62" class="title">Mapa de navegación · Mi Gestor de Hábitos</text>
+  <text x="70" y="94" class="subtitle">Wireframe de arquitectura con Expo Router — Tabs, Stack, ruta dinámica y Modal</text>
+
+  <rect x="70" y="140" width="1060" height="700" rx="22" fill="#fff" stroke="#dbe3ef" stroke-width="2"/>
+  <text x="105" y="183" class="section">Flujo principal de navegación</text>
+
+  <rect x="110" y="245" width="260" height="155" rx="18" class="node"/>
+  <text x="145" y="287" class="screen">Inicio de la app</text>
+  <text x="145" y="317" class="small">Redirige a (tabs)</text>
+  <rect x="145" y="344" width="118" height="30" rx="15" fill="#506ee5"/><text x="170" y="365" class="label">index.tsx</text>
+
+  <path d="M370 322 H450" class="line"/>
+  <rect x="470" y="220" width="610" height="215" rx="18" class="tab"/>
+  <text x="500" y="260" class="screen">(tabs) · Barra de navegación inferior</text>
+  <rect x="505" y="290" width="165" height="106" rx="14" class="node"/>
+  <text x="544" y="329" class="screen">Hoy</text><text x="523" y="358" class="small">Hábitos del día</text>
+  <rect x="695" y="290" width="165" height="106" rx="14" class="node"/>
+  <text x="729" y="329" class="screen">Progreso</text><text x="715" y="358" class="small">Estadísticas</text>
+  <rect x="885" y="290" width="165" height="106" rx="14" class="node"/>
+  <text x="911" y="329" class="screen">Perfil</text><text x="908" y="358" class="small">Cuenta y metas</text>
+  <text x="500" y="421" class="small">Tres pantallas principales persistentes en Tabs</text>
+
+  <path d="M587 435 V512" class="line"/>
+  <rect x="410" y="540" width="355" height="172" rx="18" class="stack"/>
+  <text x="440" y="582" class="screen">Hábitos · Stack</text>
+  <text x="440" y="613" class="small">Desde “Hoy”, toca un hábito</text>
+  <rect x="440" y="638" width="294" height="46" rx="10" class="node"/>
+  <text x="461" y="668" class="screen">Detalle de hábito  ← regresar</text>
+  <path d="M765 626 H850" class="line"/>
+  <rect x="870" y="540" width="210" height="172" rx="18" class="dynamic"/>
+  <text x="897" y="582" class="screen">[id].tsx</text>
+  <text x="897" y="613" class="small">Ruta dinámica</text>
+  <text x="897" y="640" class="small">/habitos/:id</text>
+  <text x="897" y="668" class="small">Ej.: /habitos/42</text>
+
+  <path d="M960 435 V480 H1250 V555" class="line"/>
+  <rect x="1160" y="580" width="285" height="150" rx="18" class="modal"/>
+  <text x="1190" y="622" class="screen">Nuevo hábito · Modal</text>
+  <text x="1190" y="653" class="small">Formulario rápido</text>
+  <text x="1190" y="680" class="small">Se abre desde “Hoy”</text>
+  <text x="1190" y="707" class="small">y se cierra al guardar</text>
+
+  <rect x="70" y="875" width="1375" height="62" rx="14" fill="#fff" stroke="#dbe3ef" stroke-width="2"/>
+  <rect x="100" y="894" width="22" height="22" rx="5" fill="#eaf1ff" stroke="#5a83d8" stroke-width="2"/><text x="135" y="911" class="small">Tabs</text>
+  <rect x="270" y="894" width="22" height="22" rx="5" fill="#fff3df" stroke="#e59a3a" stroke-width="2"/><text x="305" y="911" class="small">Stack (jerárquico)</text>
+  <rect x="515" y="894" width="22" height="22" rx="5" fill="#e3f8ef" stroke="#38a56b" stroke-width="2"/><text x="550" y="911" class="small">Ruta dinámica [id]</text>
+  <rect x="790" y="894" width="22" height="22" rx="5" fill="#f5eaff" stroke="#9c62d4" stroke-width="2"/><text x="825" y="911" class="small">Modal</text>
+</svg>
