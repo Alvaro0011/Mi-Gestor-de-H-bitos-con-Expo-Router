@@ -1,46 +1,44 @@
 # Mi Gestor de Hábitos
 
-Aplicación móvil desarrollada con Expo + React Native + Expo Router para gestionar hábitos diarios, seguir el progreso y mantener una rutina más organizada.
+<div align="center">
 
-## Descripción
+![Expo Router](https://img.shields.io/badge/Expo-Router-000020?style=for-the-badge&logo=expo&logoColor=white)
+![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 
-**Mi Gestor de Hábitos** es un proyecto personal pensado para ayudar al usuario a registrar actividades recurrentes, visualizar su progreso y mantener un seguimiento constante de sus metas diarias.
+</div>
 
-La aplicación está enfocada en una experiencia simple, clara y rápida, con una navegación intuitiva adecuadas para un uso cotidiano.
+Aplicación móvil desarrollada con Expo + React Native para gestionar hábitos diarios, visualizar el progreso y mantener rutinas más ordenadas y consistentes.
 
-## Capturas de flujo principal
+## ✨ Descripción
 
-La navegación se estructura en tres pestañas principales:
+**Mi Gestor de Hábitos** es un proyecto personal orientado a la productividad y el bienestar. Su objetivo principal es ayudar al usuario a registrar actividades repetitivas, revisar su avance y mantener una rutina diaria clara y motivadora.
 
-- **Hoy**: resumen de los hábitos activos.
-- **Progreso**: seguimiento del avance general.
-- **Perfil**: información del usuario y configuración personal.
+La aplicación está diseñada con una navegación simple e intuitiva, una estructura fácil de entender y un enfoque centrado en la experiencia del usuario.
 
-Además, la app incluye:
+## 🧭 Arquitectura de navegación
 
-- detalle de cada hábito mediante una ruta dinámica,
-- creación rápida de hábitos en un modal,
-- estado global para compartir datos entre pantallas.
+La app está organizada con Expo Router para separar claramente las pantallas principales y los flujos secundarios:
 
-## Arquitectura de navegación
+- `app/(tabs)` → navegación principal por pestañas
+  - `Hoy`
+  - `Progreso`
+  - `Perfil`
+- `app/habitos/[id].tsx` → detalle dinámico de un hábito
+- `app/modal.tsx` → modal para crear un nuevo hábito
+- `src/context/HabitsContext.tsx` → estado compartido de hábitos
 
-El proyecto usa Expo Router para organizar la navegación de la siguiente manera:
+Esta estructura permite que la información se mantenga sincronizada entre pantallas y que la app se vea más limpia y mantenible.
 
-- `app/(tabs)` → pestañas principales de la app.
-- `app/habitos/[id]` → vista dinámica del detalle de un hábito.
-- `app/modal.tsx` → formulario modal para agregar un nuevo hábito.
-- `src/context/HabitsContext.tsx` → contexto compartido con la lista de hábitos.
+## 📌 Funcionalidades
 
-Para ver la explicación detallada del flujo, revisa la documentación en [docs/README.md](docs/README.md) y el wireframe en [docs/wireframe-navegacion.svg](docs/wireframe-navegacion.svg).
+- Visualización de hábitos activos en la pantalla principal.
+- Navegación por pestañas para separar secciones de la app.
+- Detalle individual de cada hábito mediante rutas dinámicas.
+- Creación rápida de nuevos hábitos desde un modal.
+- Estado global compartido para manejar la lógica de la lista de hábitos.
 
-## Tecnologías utilizadas
-
-- React Native
-- Expo
-- Expo Router
-- TypeScript
-
-## Estructura del proyecto
+## 🗂️ Estructura del proyecto
 
 ```text
 .
@@ -65,10 +63,16 @@ Para ver la explicación detallada del flujo, revisa la documentación en [docs/
 ├── package.json
 ├── tsconfig.json
 ├── .gitignore
-└── README.md
+├── README.md
+└── expo-env.d.ts
 ```
 
-## Instalación
+## 📝 Documentación adicional
+
+- [docs/README.md](docs/README.md) — explicación detallada del diseño de navegación.
+- [docs/wireframe-navegacion.svg](docs/wireframe-navegacion.svg) — diagrama visual del flujo de la app.
+
+## 🚀 Instalación
 
 1. Clona el repositorio:
 
@@ -76,7 +80,7 @@ Para ver la explicación detallada del flujo, revisa la documentación en [docs/
 git clone https://github.com/Alvaro0011/Mi-Gestor-de-H-bitos-con-Expo-Router.git
 ```
 
-2. Entra a la carpeta del proyecto:
+2. Entra en la carpeta del proyecto:
 
 ```bash
 cd Mi-Gestor-de-H-bitos-con-Expo-Router
@@ -88,20 +92,27 @@ cd Mi-Gestor-de-H-bitos-con-Expo-Router
 npm install
 ```
 
-4. Inicia la aplicación:
+4. Ejecuta la aplicación:
 
 ```bash
 npm start
 ```
 
-## Estado del proyecto
+## 🛠️ Stack tecnológico
 
-Este proyecto se encuentra en desarrollo como una aplicación de demostración con enfoque en arquitectura de navegación y gestión de hábitos. La estructura está diseñada para ser clara, escalable y fácil de ampliar.
+- React Native
+- Expo
+- Expo Router
+- TypeScript
 
-## Autor
+## 📈 Estado del proyecto
+
+Este proyecto se encuentra en desarrollo como una aplicación funcional de demostración, con enfoque en navegación, estructura de rutas y gestión de hábitos.
+
+## 👤 Autor
 
 Proyecto personal desarrollado por Alvaro.
 
-## Licencia
+## 📄 Licencia
 
-Este proyecto se comparte con fines educativos y de portafolio.
+Este repositorio se comparte con fines educativos y de portafolio.
