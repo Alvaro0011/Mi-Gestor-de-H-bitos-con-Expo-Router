@@ -8,37 +8,49 @@
 
 </div>
 
-Aplicación móvil desarrollada con Expo + React Native para gestionar hábitos diarios, visualizar el progreso y mantener rutinas más ordenadas y consistentes.
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Alvaro0011/Mi-Gestor-de-H-bitos-con-Expo-Router/main/docs/wireframe-navegacion.svg" alt="Diagrama de navegación del proyecto" width="100%" />
+</div>
 
-## ✨ Descripción
+Aplicación móvil desarrollada con Expo y React Native para gestionar hábitos diarios, visualizar el progreso y mantener rutinas más ordenadas, claras y consistentes.
 
-**Mi Gestor de Hábitos** es un proyecto personal orientado a la productividad y el bienestar. Su objetivo principal es ayudar al usuario a registrar actividades repetitivas, revisar su avance y mantener una rutina diaria clara y motivadora.
+## ✨ Sobre el proyecto
 
-La aplicación está diseñada con una navegación simple e intuitiva, una estructura fácil de entender y un enfoque centrado en la experiencia del usuario.
+**Mi Gestor de Hábitos** es un proyecto personal pensado para apoyar la organización de la vida diaria. Su finalidad es ofrecer una herramienta simple para registrar hábitos, comprender el avance personal y mantener un seguimiento constante de metas y rutinas recurrentes.
+
+La aplicación está centrada en una experiencia intuitiva, una navegación clara y una estructura fácil de mantener, lo que la convierte en un excelente ejemplo de arquitectura básica con Expo Router.
+
+## 🧠 Objetivos principales
+
+- Facilitar la gestión de hábitos cotidianos.
+- Mejorar la organización personal mediante una interfaz simple.
+- Proporcionar una navegación clara y fluida entre pantallas.
+- Mantener el flujo de uso sin interrupciones durante la creación de nuevos hábitos.
 
 ## 🧭 Arquitectura de navegación
 
-La app está organizada con Expo Router para separar claramente las pantallas principales y los flujos secundarios:
+La app utiliza Expo Router para estructurar la navegación de forma modular y directa:
 
-- `app/(tabs)` → navegación principal por pestañas
+- `app/(tabs)` → estructura principal con las pestañas de la app.
   - `Hoy`
   - `Progreso`
   - `Perfil`
-- `app/habitos/[id].tsx` → detalle dinámico de un hábito
-- `app/modal.tsx` → modal para crear un nuevo hábito
-- `src/context/HabitsContext.tsx` → estado compartido de hábitos
+- `app/habitos/[id].tsx` → detalle dinámico de un hábito seleccionado.
+- `app/modal.tsx` → modal para crear un hábito nuevo sin salir de la vista actual.
+- `src/context/HabitsContext.tsx` → contexto compartido con la lógica y datos de los hábitos.
 
-Esta estructura permite que la información se mantenga sincronizada entre pantallas y que la app se vea más limpia y mantenible.
+Este enfoque permite mantener los datos sincronizados entre pantallas y crear una experiencia coherente para el usuario.
 
-## 📌 Funcionalidades
+## ⚙️ Funcionalidades
 
-- Visualización de hábitos activos en la pantalla principal.
-- Navegación por pestañas para separar secciones de la app.
-- Detalle individual de cada hábito mediante rutas dinámicas.
-- Creación rápida de nuevos hábitos desde un modal.
-- Estado global compartido para manejar la lógica de la lista de hábitos.
+- Vista principal con listado de hábitos.
+- Navegación por tabs para separar secciones principales.
+- Acceso al detalle individual de cada hábito.
+- Modal de creación rápida para nuevas metas.
+- Estado compartido para centralizar la lógica del proyecto.
+- Estructura preparada para crecer con más funcionalidades.
 
-## 🗂️ Estructura del proyecto
+## 📁 Estructura del proyecto
 
 ```text
 .
@@ -64,15 +76,16 @@ Esta estructura permite que la información se mantenga sincronizada entre panta
 ├── tsconfig.json
 ├── .gitignore
 ├── README.md
-└── expo-env.d.ts
+├── expo-env.d.ts
+└── package-lock.json
 ```
 
-## 📝 Documentación adicional
+## 📘 Documentación
 
 - [docs/README.md](docs/README.md) — explicación detallada del diseño de navegación.
-- [docs/wireframe-navegacion.svg](docs/wireframe-navegacion.svg) — diagrama visual del flujo de la app.
+- [docs/wireframe-navegacion.svg](docs/wireframe-navegacion.svg) — diagrama visual de la arquitectura de la app.
 
-## 🚀 Instalación
+## 🚀 Instalación y ejecución
 
 1. Clona el repositorio:
 
@@ -80,7 +93,7 @@ Esta estructura permite que la información se mantenga sincronizada entre panta
 git clone https://github.com/Alvaro0011/Mi-Gestor-de-H-bitos-con-Expo-Router.git
 ```
 
-2. Entra en la carpeta del proyecto:
+2. Accede a la carpeta del proyecto:
 
 ```bash
 cd Mi-Gestor-de-H-bitos-con-Expo-Router
@@ -92,7 +105,7 @@ cd Mi-Gestor-de-H-bitos-con-Expo-Router
 npm install
 ```
 
-4. Ejecuta la aplicación:
+4. Inicia la aplicación:
 
 ```bash
 npm start
@@ -107,7 +120,7 @@ npm start
 
 ## 📈 Estado del proyecto
 
-Este proyecto se encuentra en desarrollo como una aplicación funcional de demostración, con enfoque en navegación, estructura de rutas y gestión de hábitos.
+Proyecto personal en desarrollo, enfocado en la navegación, la experiencia de usuario y la organización de hábitos mediante una arquitectura clara y funcional.
 
 ## 👤 Autor
 
@@ -115,4 +128,4 @@ Proyecto personal desarrollado por Alvaro.
 
 ## 📄 Licencia
 
-Este repositorio se comparte con fines educativos y de portafolio.
+Este proyecto se comparte con fines educativos y de portafolio.
